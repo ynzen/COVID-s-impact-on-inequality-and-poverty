@@ -15,9 +15,9 @@ pip cleanup
 *** generate poverty lines to query ***
 
 clear
-set obs 10000
+set obs 100000
 gen double povertyline = _n/200
-replace povertyline = povertyline[_n-1]*1.0025 if povertyline>2 			// Chose increments of 0.005 until 2, and then increase of 0.25% 
+replace povertyline = povertyline[_n-1]*1.0025 if povertyline>50 			// Chose increments of 0.005 until 50, and then increase of 0.25% 
 drop if povertyline>900
 replace povertyline = round(povertyline,0.001)
 tostring povertyline, replace force
@@ -96,7 +96,6 @@ reshape long welf, i(obs year) j(code) string
 sort year code obs
 
 lab var code 	"Country code"
-lab var weight 	"Weight"
 lab var welf 	"Average daily welfare of bin in 2017 PPP USD"
 
 save "CollapsedDistributions.dta", replace 
