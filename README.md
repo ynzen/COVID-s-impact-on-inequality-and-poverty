@@ -15,7 +15,7 @@ Description: Adds missing countries to create a global binned distribution with 
     
 **Data**
 
-Link to 1000 Binned Global Distribution ... [available soon]
+Link to 1000 Binned Global Distribution: https://datacatalog.worldbank.org/search/dataset/0064304/1000_binned_global_distribution
 
 **Reference**
 
